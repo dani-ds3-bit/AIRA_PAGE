@@ -5,7 +5,7 @@ import VideoPlayer from '../../components/VideoPlayer/VideoPlayer'
 import { VIDEOS } from '../../assets/videos'
 import './ReservaPage.css'
 
-const INSTALL_IMG = '/imagenes/contacto_instalacion.jpg'
+const INSTALL_IMG = 'imagenes/contacto_instalacion.jpg'
 
 
 const faqs = [
