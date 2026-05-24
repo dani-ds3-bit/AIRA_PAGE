@@ -1,0 +1,538 @@
+.contacto-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ─── Fondos ambientales ─── */
+.contacto-page__ambient {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.contacto-page__glow {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(120px);
+}
+
+.contacto-page__glow--top {
+  top: 0; left: 25%;
+  width: 50%; height: 50%;
+  background: rgba(153, 203, 253, 0.05);
+}
+
+.contacto-page__glow--bottom {
+  bottom: 0; right: 25%;
+  width: 33%; height: 33%;
+  background: rgba(233, 195, 73, 0.05);
+}
+
+.contacto-page__dot-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image: radial-gradient(circle at 2px 2px, #8b9199 1px, transparent 0);
+  background-size: 32px 32px;
+}
+
+/* ─── Main ─── */
+.contacto-main {
+  position: relative;
+  z-index: 10;
+  padding-top: 128px;
+  padding-bottom: 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 96px;
+}
+
+/* ─── Encabezado ─── */
+.contacto-header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 780px;
+}
+
+.contacto-header__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contacto-header__eyebrow-line {
+  display: block;
+  width: 40px;
+  height: 1px;
+  background-color: var(--color-secondary);
+}
+
+.contacto-header__eyebrow-label {
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.contacto-header__title {
+  color: var(--color-on-surface);
+  line-height: 1.1;
+}
+
+.contacto-header__title-accent {
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.contacto-header__subtitle {
+  color: var(--color-on-surface-variant);
+  max-width: 600px;
+}
+
+/* ─── Sección genérica ─── */
+.contacto-section-title {
+  color: var(--color-on-surface);
+  margin-bottom: 40px;
+}
+
+/* ─── Clasificación del proyecto ─── */
+.contacto-clasificacion__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-gutter);
+}
+
+@media (min-width: 768px) {
+  .contacto-clasificacion__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.contacto-dato-card {
+  border-radius: 0.75rem;
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  backdrop-filter: blur(16px);
+  transition: transform 0.3s ease;
+}
+
+.contacto-dato-card:hover { transform: translateY(-2px); }
+
+.contacto-dato-card__icon {
+  color: var(--color-primary);
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
+
+.contacto-dato-card__label {
+  color: var(--color-on-surface-variant);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-size: 10px;
+}
+
+.contacto-dato-card__value {
+  color: var(--color-on-surface);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* ─── Equipo ─── */
+.contacto-equipo__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .contacto-equipo__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.contacto-miembro {
+  border-radius: 0.75rem;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  backdrop-filter: blur(16px);
+  transition: transform 0.2s ease;
+}
+
+.contacto-miembro:hover { transform: translateY(-2px); }
+
+.contacto-miembro__avatar {
+  color: var(--color-primary);
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+.contacto-miembro__avatar .material-symbols-outlined {
+  font-size: 2.5rem;
+}
+
+.contacto-miembro__nombre {
+  color: var(--color-on-surface);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.contacto-miembro__rol {
+  color: var(--color-secondary);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  margin-top: 2px;
+}
+
+.contacto-asesores {
+  margin-top: 20px;
+  padding: 20px 22px;
+  border-radius: 0.75rem;
+  background: rgba(23,31,51,0.4);
+  border: 1px solid rgba(65,71,79,0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contacto-asesores__label {
+  color: var(--color-on-surface-variant);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-size: 10px;
+}
+
+.contacto-asesores__names {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+}
+
+.contacto-asesores__name {
+  color: var(--color-on-surface);
+  font-size: 14px;
+}
+
+/* ─── Configuraciones ─── */
+.contacto-configs__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-gutter);
+}
+
+@media (min-width: 768px) {
+  .contacto-configs__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.contacto-config-card {
+  background-color: var(--color-surface-container);
+  border: 1px solid rgba(65, 71, 79, 0.15);
+  border-radius: 0.75rem;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.4s ease, transform 0.3s ease;
+}
+
+.contacto-config-card:hover {
+  transform: translateY(-4px);
+}
+
+.contacto-config-card--primary:hover  { border-color: rgba(153, 203, 253, 0.4); }
+.contacto-config-card--secondary:hover { border-color: rgba(166, 202, 239, 0.4); }
+.contacto-config-card--tertiary:hover  { border-color: rgba(233, 195, 73, 0.4); }
+
+.contacto-config-card__hover-glow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(153, 203, 253, 0.04) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.contacto-config-card--tertiary .contacto-config-card__hover-glow {
+  background: linear-gradient(135deg, rgba(233, 195, 73, 0.04) 0%, transparent 100%);
+}
+
+.contacto-config-card:hover .contacto-config-card__hover-glow { opacity: 1; }
+
+.contacto-config-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contacto-config-card__icon {
+  font-size: 2rem;
+}
+
+.contacto-config-card__tag {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border: 1px solid;
+  border-radius: 9999px;
+}
+
+.contacto-config-card__name {
+  color: var(--color-on-surface);
+}
+
+.contacto-config-card__desc {
+  color: var(--color-on-surface-variant);
+  font-size: 15px;
+  flex: 1;
+}
+
+.contacto-config-card__features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 1px solid rgba(65, 71, 79, 0.12);
+  padding-top: 16px;
+  margin-top: 4px;
+}
+
+.contacto-config-card__feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-on-surface-variant);
+}
+
+.contacto-config-card__check {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* ─── Sección inferior ─── */
+.contacto-bottom {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-gutter);
+}
+
+@media (min-width: 1024px) {
+  .contacto-bottom {
+    grid-template-columns: 5fr 7fr;
+  }
+}
+
+/* ─── Guía de instalación ─── */
+.contacto-install {
+  border-radius: 0.75rem;
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  backdrop-filter: blur(24px);
+}
+
+.contacto-install__top-line {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(to right, var(--color-tertiary), transparent);
+  opacity: 0.6;
+}
+
+.contacto-install__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.contacto-install__title {
+  color: var(--color-on-surface);
+  margin-bottom: 4px;
+}
+
+.contacto-install__sub {
+  color: var(--color-on-surface-variant);
+  font-size: 14px;
+}
+
+.contacto-install__thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: var(--color-surface-container-high);
+  border: 1px solid rgba(65, 71, 79, 0.2);
+  cursor: pointer;
+}
+
+.contacto-install__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.65;
+  transition: opacity 0.4s ease;
+}
+
+.contacto-install__thumb:hover .contacto-install__img { opacity: 0.85; }
+
+.contacto-install__play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contacto-install__play-btn {
+  width: 64px;
+  height: 64px;
+  border-radius: 9999px;
+  background: rgba(11, 19, 38, 0.55);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(65, 71, 79, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.contacto-install__thumb:hover .contacto-install__play-btn {
+  transform: scale(1.1);
+  background: rgba(153, 203, 253, 0.15);
+}
+
+.contacto-install__caption {
+  color: var(--color-on-surface-variant);
+  font-size: 14px;
+}
+
+/* ─── FAQ ─── */
+.contacto-faq {
+  border-radius: 0.75rem;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  backdrop-filter: blur(24px);
+}
+
+.contacto-faq__heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-on-surface);
+}
+
+.contacto-faq__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacto-faq__item {
+  padding: 16px 0;
+}
+
+.contacto-faq__item--border {
+  border-bottom: 1px solid rgba(65, 71, 79, 0.15);
+}
+
+.contacto-faq__question {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-on-surface);
+  text-align: left;
+}
+
+.contacto-faq__q-text {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.contacto-faq__q-icon {
+  color: var(--color-outline-variant);
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.contacto-faq__answer {
+  color: var(--color-on-surface-variant);
+  font-size: 14px;
+  padding-right: 32px;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+/* Contacto */
+.contacto-faq__contact {
+  border-top: 1px solid rgba(65, 71, 79, 0.12);
+  padding-top: 20px;
+  margin-top: auto;
+}
+
+.contacto-faq__contact-label {
+  color: var(--color-on-surface-variant);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 10px;
+  margin-bottom: 16px;
+}
+
+.contacto-faq__contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contacto-faq__contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  color: var(--color-secondary);
+}
+
+.contacto-faq__contact-item .material-symbols-outlined {
+  font-size: 1.1rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.contacto-faq__contact-sublabel {
+  color: var(--color-on-surface-variant);
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.contacto-faq__contact-item .body-md {
+  color: var(--color-on-surface);
+  font-size: 14px;
+}
