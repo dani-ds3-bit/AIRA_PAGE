@@ -10,7 +10,7 @@ export default function Navbar() {
     <nav className="navbar-container">
       {/* Logo */}
       <NavLink to="/vision" className="navbar__brand">
-        <img src="logo_inicio.png" alt="AIRA" className="navbar__logo" />
+        <img src="/AIRA_PAGE/logo_inicio.png" alt="AIRA" className="navbar__logo" />
       </NavLink>
 
       {/* Center Pill */}

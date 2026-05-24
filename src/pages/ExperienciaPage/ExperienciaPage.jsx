@@ -4,7 +4,7 @@ import VideoPlayer from '../../components/VideoPlayer/VideoPlayer'
 import { VIDEOS } from '../../assets/videos'
 import './ExperienciaPage.css'
 
-const RESERVATION_IMG = 'imagenes/experiencia_app.jpg'
+const RESERVATION_IMG = '/AIRA_PAGE/imagenes/experiencia_app.jpg'
 const DASHBOARD_IMG = 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80'
 
 // Pasos del flujo de uso (tal como está en la memoria)
@@ -75,7 +75,7 @@ export default function ExperienciaPage() {
 
               <div className="exp-component-card__visual">
                  <div className="phone-frame-wrapper">
-                   <img src="vista_telefono.png" alt="AiRA App Móvil" className="exp-component-card__phone-mockup" />
+                   <img src="/AIRA_PAGE/vista_telefono.png" alt="AiRA App Móvil" className="exp-component-card__phone-mockup" />
                  </div>
               </div>
             </div>

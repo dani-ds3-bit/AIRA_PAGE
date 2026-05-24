@@ -4,8 +4,8 @@ import VideoPlayer from '../../components/VideoPlayer/VideoPlayer'
 import { VIDEOS } from '../../assets/videos'
 import './BeneficiosPage.css'
 
-const DATA_VIZ_IMG = 'imagenes/sostenibilidad_ar.jpg'
-const VIDEO_IMG = 'imagenes/beneficios_video.jpg'
+const DATA_VIZ_IMG = '/AIRA_PAGE/imagenes/sostenibilidad_ar.jpg'
+const VIDEO_IMG = '/AIRA_PAGE/imagenes/beneficios_video.jpg'
 
 const statCards = [
   { icon: 'timer', color: 'primary', value: '45%', desc: 'Reducción promedio en el tiempo de tránsito y búsqueda por unidad operativa.' },

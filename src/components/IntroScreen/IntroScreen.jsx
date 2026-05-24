@@ -118,7 +118,7 @@ export default function IntroScreen({ onComplete }) {
         <div ref={glowRef} className="intro-glow" />
         <img
           ref={logoRef}
-          src="logo_inicio.png"
+          src="/AIRA_PAGE/logo_inicio.png"
           alt="AiRA"
           className="intro-logo-img"
         />

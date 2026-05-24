@@ -5,10 +5,10 @@ import VideoPlayer from '../../components/VideoPlayer/VideoPlayer'
 import { VIDEOS } from '../../assets/videos'
 import './VisionPage.css'
 
-const COMO_FUNCIONA_IMG = 'imagenes/chatbot_laptop.jpg'
-const VID1_IMG = 'imagenes/reserva_app_in_car.jpg'
-const VID2_IMG = 'imagenes/vision_solucion.jpg'
-const VID3_IMG = 'imagenes/vision_impacto.jpg'
+const COMO_FUNCIONA_IMG = '/AIRA_PAGE/imagenes/chatbot_laptop.jpg'
+const VID1_IMG = '/AIRA_PAGE/imagenes/reserva_app_in_car.jpg'
+const VID2_IMG = '/AIRA_PAGE/imagenes/vision_solucion.jpg'
+const VID3_IMG = '/AIRA_PAGE/imagenes/vision_impacto.jpg'
 
 const pilares = [
   {
