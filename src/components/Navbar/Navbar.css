@@ -158,54 +158,52 @@
 
 /* Mobile Drawer */
 .navbar__mobile-drawer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100vw;
-  height: 100vh;
+  position: absolute;
+  top: 100px;
+  right: var(--spacing-margin-mobile);
+  left: var(--spacing-margin-mobile);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 40px var(--spacing-margin-mobile);
-  gap: 28px;
-  background: #030303 !important; /* Completely solid black to cover page content */
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  border: none !important;
-  box-shadow: none !important;
+  padding: 32px 24px;
+  border-radius: var(--radius-lg);
+  gap: 20px;
+  /* Ultra premium dark tempered glass look: 96% opaque to hide background text clashing */
+  background: rgba(10, 10, 12, 0.96) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  backdrop-filter: blur(40px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(40px) saturate(180%) !important;
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, 0.85),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
   z-index: 9990;
-  animation: fadeInMobileDrawer 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: fadeInMobileDrawer 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 @keyframes fadeInMobileDrawer {
-  from { opacity: 0; transform: translateY(-12px); }
+  from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
 .navbar__mobile-link {
-  font-family: var(--font-serif);
-  font-size: 1.75rem;
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
   font-weight: 400;
   color: var(--color-on-surface-muted);
   text-decoration: none;
   transition: color 0.25s, transform 0.25s;
-  letter-spacing: -0.01em;
+  padding: 4px 0;
 }
 
 .navbar__mobile-link:hover,
 .navbar__mobile-link.active {
   color: var(--color-on-surface);
-  transform: scale(1.05);
+  transform: translateX(4px);
 }
 
 .navbar__mobile-drawer .navbar__cta {
-  margin-top: 24px;
-  width: 80%;
-  max-width: 280px;
+  margin-top: 16px;
+  width: 100%;
   justify-content: center;
-  font-size: 1rem;
-  padding: 12px 24px;
+  font-size: 0.95rem;
+  padding: 11px 20px;
 }

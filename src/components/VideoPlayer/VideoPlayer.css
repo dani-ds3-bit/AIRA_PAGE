@@ -226,3 +226,42 @@
   max-height: 75vh;
   object-fit: contain;
 }
+
+/* ─── Mobile Optimization to prevent text/play button clash ─── */
+@media (max-width: 768px) {
+  .vp-thumb__play-btn {
+    width: 48px !important;
+    height: 48px !important;
+    box-shadow: 0 0 20px rgba(153, 203, 253, 0.1) !important;
+  }
+  
+  .vp-thumb__play-icon {
+    font-size: 1.5rem !important;
+    margin-left: 2px !important;
+  }
+  
+  .vp-thumb__label {
+    bottom: 12px !important;
+    left: 16px !important;
+    right: 16px !important;
+  }
+  
+  .vp-thumb__label-title {
+    font-size: 0.95rem !important;
+    line-height: 1.25 !important;
+  }
+  
+  .vp-thumb__label-eyebrow {
+    margin-bottom: 2px !important;
+    gap: 6px !important;
+  }
+  
+  .vp-thumb__label-tag {
+    font-size: 0.65rem !important;
+  }
+  
+  .vp-thumb__label-sub {
+    font-size: 0.75rem !important;
+    margin-top: 2px !important;
+  }
+}
