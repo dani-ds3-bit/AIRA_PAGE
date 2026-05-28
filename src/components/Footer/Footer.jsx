@@ -15,7 +15,7 @@ export default function Footer() {
         <div className="footer__brand">
           <img src="/AIRA_PAGE/logo_inicio.png" alt="AIRA" className="footer__logo" />
           <p className="body-md footer__brand-copy">
-            © 2026 Proyecto AIRA.
+            © 2026 Proyecto AIRA - by ByteNova
           </p>
         </div>
 

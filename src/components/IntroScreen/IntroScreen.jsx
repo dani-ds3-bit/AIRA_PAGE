@@ -12,16 +12,32 @@ export default function IntroScreen({ onComplete }) {
   const descRef = useRef(null)
   const dividerRef = useRef(null)
   const [isDone, setIsDone] = useState(false)
+  const tlRef = useRef(null)
+
+  const handleSkip = () => {
+    if (isDone) return
+    tlRef.current?.kill()
+    gsap.killTweensOf(logoRef.current)
+    gsap.to(containerRef.current, {
+      opacity: 0,
+      duration: 0.4,
+      ease: 'power2.inOut',
+      onComplete: () => {
+        setIsDone(true)
+        onComplete()
+      },
+    })
+  }
 
   useEffect(() => {
-    // Creamos la línea de tiempo maestra para la animación automática
-    const tl = gsap.timeline({ 
+    const tl = gsap.timeline({
       delay: 0.5,
       onComplete: () => {
         setIsDone(true)
         onComplete()
       }
     })
+    tlRef.current = tl
 
     // 1. Entrada del logo
     tl.fromTo(logoRef.current,
@@ -100,7 +116,7 @@ export default function IntroScreen({ onComplete }) {
   if (isDone) return null
 
   return (
-    <div ref={containerRef} className="intro-screen" id="intro-screen">
+    <div ref={containerRef} className="intro-screen" id="intro-screen" onClick={handleSkip}>
       {/* Fondo de partículas */}
       <div className="intro-particles">
         {Array.from({ length: 28 }).map((_, i) => (
@@ -126,7 +142,12 @@ export default function IntroScreen({ onComplete }) {
 
       {/* Textos Automáticos */}
       <div ref={revealRef} className="intro-reveal-auto">
-        <h1 ref={taglineRef} className="intro-tagline-auto">AiRA</h1>
+        <img
+          ref={taglineRef}
+          src="/AIRA_PAGE/logo_inicio.png"
+          alt="AiRA"
+          className="intro-tagline-logo"
+        />
         <h2 ref={subtitleRef} className="intro-subtitle-auto">Artificial Intelligence Rental Assistant</h2>
         <p ref={descRef} className="intro-desc-auto">
           Rentabilidad más inteligente. Un salto enorme respecto a modelos convencionales. Este sistema es capaz de detectar, gestionar y asegurar tu espacio de forma instantánea.

@@ -90,6 +90,16 @@ export default function ExperienciaPage() {
                 Se instala en el espacio de estacionamiento. Incluye una cámara con IA que detecta vehículos registrados y LEDs de estado visibles que guían al conductor.
               </p>
 
+              {/* Module device image */}
+              <div className="exp-module-img-wrap">
+                <img
+                  src="/AIRA_PAGE/MODULO.png"
+                  alt="Módulo Físico Inteligente AIRA"
+                  className="exp-module-img"
+                  onError={(e) => { e.target.style.display = 'none' }}
+                />
+              </div>
+
               <ul className="exp-component-card__leds">
                 <li className="led-item">
                   <span className="led-indicator led-indicator--green"></span>

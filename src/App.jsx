@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { HashRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import BeneficiosPage from './pages/BeneficiosPage/BeneficiosPage'
 import ExperienciaPage from './pages/ExperienciaPage/ExperienciaPage'
+import PlanesPage from './pages/PlanesPage/PlanesPage'
 import ReservaPage from './pages/ReservaPage/ReservaPage'
 import VisionPage from './pages/VisionPage/VisionPage'
 import IntroScreen from './components/IntroScreen/IntroScreen'
@@ -31,6 +32,7 @@ export default function App() {
           <Route path="/vision" element={<VisionPage />} />
           <Route path="/beneficios" element={<BeneficiosPage />} />
           <Route path="/experiencia" element={<ExperienciaPage />} />
+          <Route path="/planes" element={<PlanesPage />} />
           <Route path="/reserva" element={<ReservaPage />} />
         </Routes>
       </HashRouter>

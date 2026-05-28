@@ -456,6 +456,44 @@
   border-bottom: 1px solid rgba(65, 71, 79, 0.15);
 }
 
+/* Category groups */
+.contacto-faq__group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+.contacto-faq__group:last-child {
+  margin-bottom: 0;
+}
+
+.contacto-faq__group-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 0 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  margin-bottom: 4px;
+}
+
+.contacto-faq__group:first-child .contacto-faq__group-header {
+  border-top: none;
+  padding-top: 4px;
+}
+
+.contacto-faq__group-icon {
+  font-size: 14px;
+  color: var(--color-on-surface-faint);
+}
+
+.contacto-faq__group-label {
+  color: var(--color-on-surface-faint);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+
 .contacto-faq__question {
   display: flex;
   justify-content: space-between;

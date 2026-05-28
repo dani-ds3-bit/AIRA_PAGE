@@ -8,7 +8,7 @@ import './VisionPage.css'
 const COMO_FUNCIONA_IMG = '/AIRA_PAGE/imagenes/chatbot_laptop.jpg'
 const VID1_IMG = '/AIRA_PAGE/imagenes/reserva_app_in_car.jpg'
 const VID2_IMG = '/AIRA_PAGE/imagenes/vision_solucion.jpg'
-const VID3_IMG = '/AIRA_PAGE/imagenes/vision_impacto.jpg'
+const VID3_IMG = '/AIRA_PAGE/Estaciona_Seguro.png'
 
 const pilares = [
   {
@@ -18,13 +18,13 @@ const pilares = [
     body: 'Los conductores abren la app de AIRA, visualizan en el mapa los espacios disponibles cercanos a su destino y reservan con un toque, conociendo el precio por anticipado.',
   },
   {
-    img: null,
+    img: '/AIRA_PAGE/MODULO.png',
     title: 'Módulo Inteligente',
     label: 'Video del Proyecto',
     body: 'Al llegar al lugar, el Módulo Físico de AIRA detecta el vehículo registrado mediante su cámara de IA, iluminando su LED en verde para indicar que el espacio es tuyo.',
   },
   {
-    img: null,
+    img: VID3_IMG,
     title: 'Estaciona Seguro',
     label: 'Video del Proyecto',
     body: 'El conductor se estaciona sin fricciones. Al retirarse, el sistema cobra automáticamente el tiempo exacto de uso y libera el espacio para el siguiente conductor en la red.',
@@ -48,7 +48,7 @@ export default function VisionPage() {
               <span className="vision-hero__eyebrow-line" />
               <span className="label-sm vision-hero__eyebrow-label">NUESTRA VISIÓN</span>
             </div>
-            
+
             <h1 className="headline-xl vision-hero__title">
               Menos vueltas. <br />
               <span className="vision-hero__title-accent">Más soluciones.</span>

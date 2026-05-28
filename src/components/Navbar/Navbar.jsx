@@ -1,15 +1,22 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import './Navbar.css'
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
   const navigate = useNavigate()
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20)
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
     <nav className="navbar-container">
       {/* Logo */}
-      <NavLink to="/vision" className="navbar__brand">
+      <NavLink to="/vision" className={`navbar__brand${scrolled ? ' navbar__brand--scrolled' : ''}`}>
         <img src="/AIRA_PAGE/logo_inicio.png" alt="AIRA" className="navbar__logo" />
       </NavLink>
 
@@ -44,6 +51,16 @@ export default function Navbar() {
               }
             >
               Experiencia
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/planes"
+              className={({ isActive }) =>
+                'navbar__link' + (isActive ? ' navbar__link--active' : '')
+              }
+            >
+              Planes
             </NavLink>
           </li>
           <li>
@@ -87,6 +104,9 @@ export default function Navbar() {
           </NavLink>
           <NavLink to="/experiencia" className="navbar__mobile-link" onClick={() => setMobileOpen(false)}>
             Experiencia
+          </NavLink>
+          <NavLink to="/planes" className="navbar__mobile-link" onClick={() => setMobileOpen(false)}>
+            Planes
           </NavLink>
           <NavLink to="/reserva" className="navbar__mobile-link" onClick={() => setMobileOpen(false)}>
             Contacto

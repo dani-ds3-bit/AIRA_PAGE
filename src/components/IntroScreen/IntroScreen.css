@@ -13,6 +13,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  cursor: pointer; /* indicates skip on click */
 }
 
 /* ── Particles ── */
@@ -126,6 +127,15 @@
   background-clip: text;
   will-change: opacity, transform, filter;
   margin: 0;
+}
+
+/* Logo image replacing text in reveal phase */
+.intro-tagline-logo {
+  width: clamp(200px, 40vw, 420px);
+  height: auto;
+  object-fit: contain;
+  will-change: opacity, transform, filter;
+  filter: drop-shadow(0 0 40px rgba(100, 160, 255, 0.25));
 }
 
 .intro-subtitle-auto {
